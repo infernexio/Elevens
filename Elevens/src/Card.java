@@ -1,7 +1,7 @@
 /**
  * @author - Sohail Shaik
  * @Date - Apr 8, 2020
- * @Assignment - Card
+ * @Assignment - Card.java
  */
 /**
  * Card.java
