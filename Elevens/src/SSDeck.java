@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * It provides several operations including
  *      initialize, shuffle, deal, and check if empty.
  */
-public class Deck {
+public class SSDeck {
 	
 	/*Questions
 	 * 1.) a deck has-a card there is a has a reletionship
@@ -25,7 +25,7 @@ public class Deck {
 	/**
 	 * cards contains all the cards in the deck.
 	 */
-	private List<Card> cards;
+	private List<SSCard> cards;
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -43,10 +43,10 @@ public class Deck {
 	 * @param suits is an array containing all of the card suits.
 	 * @param values is an array containing all of the card point values.
 	 */
-	public Deck(String[] ranks, String[] suits, int[] values) {
-		cards = new ArrayList<Card>();
+	public SSDeck(String[] ranks, String[] suits, int[] values) {
+		cards = new ArrayList<SSCard>();
 		for(int i = 0; i < ranks.length-1; i++) {
-			cards.add(new Card(ranks[i], suits[i], values[i]));
+			cards.add(new SSCard(ranks[i], suits[i], values[i]));
 		}
 		numNotDealt = cards.size();
 		
@@ -87,9 +87,9 @@ public class Deck {
 	 * @return the card just dealt, or null if all the cards have been
 	 *         previously dealt.
 	 */
-	public Card deal() {
+	public SSCard deal() {
 		if(!isEmpty()) {
-			Card cr = cards.remove(numNotDealt-1);
+			SSCard cr = cards.remove(numNotDealt-1);
 			numNotDealt--;
 			return cr;
 		}else {

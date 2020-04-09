@@ -10,9 +10,9 @@ public class CardTester {
 	public static void main(String[] args) {
 		// Note: Student solutions will vary.  The following is an example.
 
-		Card aceClubs1 = new Card("ace", "clubs", 1);
-		Card aceClubs2 = new Card("ace", new String("clubs"), 1);
-		Card sixHearts = new Card("6", "hearts", 6);
+		SSCard aceClubs1 = new SSCard("ace", "clubs", 1);
+		SSCard aceClubs2 = new SSCard("ace", new String("clubs"), 1);
+		SSCard sixHearts = new SSCard("6", "hearts", 6);
 
 		System.out.println("**** ace of clubs #1 Tests ****");
 		System.out.println("  rank: " + aceClubs1.rank());

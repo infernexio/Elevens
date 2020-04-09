@@ -8,7 +8,7 @@
  *
  * <code>Card</code> represents a playing card.
  */
-public class Card {
+public class SSCard {
 
 	/**
 	 * String value that holds the suit of the card
@@ -36,7 +36,7 @@ public class Card {
 	 * @param cardPointValue an <code>int</code> value
 	 *                  containing the point value of the card
 	 */
-	public Card(String cardRank, String cardSuit, int cardPointValue) {
+	public SSCard(String cardRank, String cardSuit, int cardPointValue) {
 		rank = cardRank;
 		suit = cardSuit;
 		pointValue = cardPointValue;
@@ -73,7 +73,7 @@ public class Card {
 	 *              are equal to those of the argument;
 	 *         false otherwise.
 	 */
-	public boolean matches(Card otherCard) {
+	public boolean matches(SSCard otherCard) {
 		if(this.rank().equals(otherCard.rank())) {
 			if(this.suit().equals(otherCard.suit())) {
 				if(this.pointValue() == otherCard.pointValue()) {
