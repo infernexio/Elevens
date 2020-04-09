@@ -1,7 +1,7 @@
 /**
  * This is a class that tests the Deck class.
  */
-public class DeckTester {
+public class SSDeckTester {
 
 	/**
 	 * The main method in this class checks the Deck operations for consistency.
