@@ -15,7 +15,7 @@ public class SSDeck {
 	
 	/*Questions
 	 * 1.) a deck has-a card there is a has a reletionship
-	 * 2.)this deck contains 2 cards
+	 * 2.) this Deck contains 6 cards
 	 * 3.)  a - String[] ranks = {"2","3","4","5","6","7","8","10","jack", "queen", "king","ace"};
 	 * 		b - String[] suits = {"spades", "hearts", "diamonds", "clubs"};
 	 * 		c - int[] pointValues = {2,3,4,5,6,7,8,9,10,10,10,10,11};
