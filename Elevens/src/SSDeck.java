@@ -19,7 +19,7 @@ public class SSDeck {
 	 * 3.)  a - String[] ranks = {"2","3","4","5","6","7","8","10","jack", "queen", "king","ace"};
 	 * 		b - String[] suits = {"spades", "hearts", "diamonds", "clubs"};
 	 * 		c - int[] pointValues = {2,3,4,5,6,7,8,9,10,10,10,10,11};
-	 * 4.) yes order matters
+	 * 4.) order doesn't matter 
 	 */
 
 	/**
@@ -45,8 +45,10 @@ public class SSDeck {
 	 */
 	public SSDeck(String[] ranks, String[] suits, int[] values) {
 		cards = new ArrayList<SSCard>();
-		for(int i = 0; i < ranks.length-1; i++) {
-			cards.add(new SSCard(ranks[i], suits[i], values[i]));
+		for(int i = 0; i < ranks.length; i++) {
+			for(int j = 0; j < suits.length; j++) {
+			cards.add(new SSCard(ranks[i], suits[j], values[i]));
+			}
 		}
 		numNotDealt = cards.size();
 		
