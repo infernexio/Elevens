@@ -14,7 +14,8 @@ public class SSShuffler {
 	 * to each sorting procedure.
 	 */
 //	private static final int SHUFFLE_COUNT = 1;
-	private static final int SHUFFLE_COUNT = 3;
+//	private static final int SHUFFLE_COUNT = 3;
+	private static final int SHUFFLE_COUNT = 6;
 
 	/**
 	 * The number of values to shuffle.
@@ -96,28 +97,11 @@ public class SSShuffler {
 	 */
 	public static void selectionShuffle(int[] values) {
 		for (int k = values.length - 1; k > 0; k--) {
-			int pos = linearSearchLargesetPos(values, 0, k);
+			int pos = (int)(Math.random() * (k+1));
 			int temp = values[pos];
 		   values[pos] = values[k];
 		   values[k] = temp;
 			
 		}
-	}
-	
-	/**
-	 * helper method for selectionShuffle to find r.
-	 * @param arr - the arr to look for the largest
-	 * @return - reutnr the index whrer the largest numbeer is 
-	 */
-	private static int linearSearchLargesetPos(int[] arr, int start, int end) {
-		int largest = arr[0];
-		int largestPos = 0;
-		for(int i = start; i < end; i++) {
-			if (arr[i] > largest) {
-				largest = arr[i];
-				largestPos = i;
-			}
-		}
-		return largestPos;
 	}
 }
