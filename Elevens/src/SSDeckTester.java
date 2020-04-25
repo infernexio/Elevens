@@ -13,7 +13,7 @@ public class SSDeckTester {
 		String[] ranks = {"jack", "queen", "king"};
 		String[] suits = {"blue", "red"};
 		int[] pointValues = {11, 12, 13};
-		SSDeck d = new SSDeck(ranks, suits, pointValues);
+		Deck d = new Deck(ranks, suits, pointValues);
 
 		System.out.println("**** Original Deck Methods ****");
 		System.out.println("  toString:\n" + d.toString());
@@ -52,5 +52,29 @@ public class SSDeckTester {
 		System.out.println("  deal: " + d.deal());
 		System.out.println();
 		System.out.println();
+
+		System.out.println("\n**** Small deck shuffle Tests ****");
+		
+		for (int i = 1; i <= 3; i++) {
+			d.shuffle();
+			System.out.println("  After " + i + " shuffle(s):\n" + d.toString());
+		}
+		
+		System.out.println("\n**** 52 Card Deck shuffle Tests ****");
+		String[] ranks52 =
+			{"ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king"};
+		String[] suits52 =
+			{"spades", "hearts", "diamonds", "clubs"};
+		int[] pointValues52 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+		Deck d52 = new Deck(ranks52, suits52, pointValues52);
+		System.out.println("  After Creation:\n" + d52.toString());
+
+		SSCard c = d52.deal();
+		System.out.println("  After Dealing the " + c + ":\n" + d52.toString());
+
+		for (int i = 1; i <= 3; i++) {
+			d52.shuffle();
+			System.out.println("  After " + i + " shuffle(s):\n" + d52.toString());
+		}
 	}
 }

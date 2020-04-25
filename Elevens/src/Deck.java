@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * It provides several operations including
  *      initialize, shuffle, deal, and check if empty.
  */
-public class SSDeck {
+public class Deck {
 	
 	/*Questions
 	 * 1.) a deck has-a card there is a has a reletionship
@@ -43,7 +43,7 @@ public class SSDeck {
 	 * @param suits is an array containing all of the card suits.
 	 * @param values is an array containing all of the card point values.
 	 */
-	public SSDeck(String[] ranks, String[] suits, int[] values) {
+	public Deck(String[] ranks, String[] suits, int[] values) {
 		cards = new ArrayList<SSCard>();
 		for(int i = 0; i < ranks.length; i++) {
 			for(int j = 0; j < suits.length; j++) {
@@ -79,10 +79,17 @@ public class SSDeck {
 	/**
 	 * Randomly permute the given collection of cards
 	 * and reset the size to represent the entire deck.
+	 * @param values 
 	 */
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-	}
+		for (int k = cards.size() - 1; k > 0; k--) {
+			int pos = (int)(Math.random() * (k+1));
+			cards.set(pos, cards.get(k));
+			cards.set(k, cards.get(pos));
+			
+		}	
+		numNotDealt = cards.size();
+		}
 
 	/**
 	 * Deals a card from this deck.
