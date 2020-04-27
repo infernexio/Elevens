@@ -13,7 +13,7 @@ public class SSDeckTester {
 		String[] ranks = {"jack", "queen", "king"};
 		String[] suits = {"blue", "red"};
 		int[] pointValues = {11, 12, 13};
-		Deck d = new Deck(ranks, suits, pointValues);
+		SSDeck d = new SSDeck(ranks, suits, pointValues);
 
 		System.out.println("**** Original Deck Methods ****");
 		System.out.println("  toString:\n" + d.toString());
@@ -66,7 +66,7 @@ public class SSDeckTester {
 		String[] suits52 =
 			{"spades", "hearts", "diamonds", "clubs"};
 		int[] pointValues52 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-		Deck d52 = new Deck(ranks52, suits52, pointValues52);
+		SSDeck d52 = new SSDeck(ranks52, suits52, pointValues52);
 		System.out.println("  After Creation:\n" + d52.toString());
 
 		SSCard c = d52.deal();
